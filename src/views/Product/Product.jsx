@@ -8,7 +8,7 @@ export default function Product () {
     <Container>
       <Row>
         <Col>
-          <ItemDetailContainer title="My Product" productId={+productId}/>
+          <ItemDetailContainer title="My Product" productId={productId}/>
         </Col>
       </Row>
     </Container>

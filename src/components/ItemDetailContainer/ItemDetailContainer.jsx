@@ -1,13 +1,19 @@
 
 import {Container, Row, Col} from "react-bootstrap"
 import React from "react";
-import { products } from "../../data/products";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { getFirestore, doc, getDoc} from "firebase/firestore"
+
 export default function ItemDetailContainer ({ title, productId }) {
   const [item, setItem] = React.useState({});
   React.useEffect(() => {
-    setItem(products.find(item => item.id === productId));
+    const db = getFirestore();
+    const itemRef = doc(db, "products", productId);
+    getDoc(itemRef).then((snapshot) => {
+      setItem({id: snapshot.id, ...snapshot.data()});
+    });
   }, [productId]);
+
   return (
     <Container className="itemlist-container">
       <Row>
