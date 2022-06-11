@@ -40,14 +40,19 @@ const CartProvider = ({children}) => {
     return cart.reduce((acc, item) => acc += item.quantity, 0)
   }
 
+  const cartTotalPrice = () => {
+    return cart.reduce((acc, item) => acc += item.price * item.quantity, 0)
+  }
+
 
   return (
     <Provider value={{
+      cart,
       addToCart,
       removeFromCart,
       deleteAll,
       isInCart,
-      cart,
+      cartTotalPrice,
       cartQuantity
     }}>{children}</Provider>
   )
