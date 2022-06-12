@@ -6,7 +6,7 @@ export default function Header () {
     <header>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand className="textLogo">
             <Link to="/" className="nav-link active" aria-current="page">Fennex</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
