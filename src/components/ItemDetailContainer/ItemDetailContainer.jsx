@@ -18,7 +18,7 @@ export default function ItemDetailContainer ({ title, productId }) {
     <Container className="itemlist-container">
       <Row>
         <Col>
-          <h1 style={{justifyContent:'center'}}>{title}</h1>
+          <h1>{title}</h1>
         </Col>
       </Row>
       <Row>

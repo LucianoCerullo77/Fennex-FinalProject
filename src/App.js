@@ -6,9 +6,10 @@ import Cart from "./views/Cart/Cart"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
+import Checkout from "./views/Checkout/Checkout"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
-import Login from "./views/Login/Login"
+
 
 
 
@@ -23,7 +24,7 @@ function App() {
           <Route exact path="/product/:productId" element={<Product />} />
           <Route exact path="/category/:categoryId" element={<Category />} />
           <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/checkout" element={<Checkout/>}/>
         </Routes>
         <Footer/>
         </CartProvider>

@@ -15,8 +15,8 @@ export default function Cart () {
     <Container>
       <Row className="empty-cart text-center">
         <Col>
-          <h3>Your cart is currently Empty</h3>
-            <Link to={"/Products"}><FontAwesomeIcon icon={faArrowLeftLong}/>Back to the store</Link>
+          <h2>Your cart is currently Empty</h2>
+            <Link to={"/home"}><FontAwesomeIcon icon={faArrowLeftLong}/>Back to the store</Link>
         </Col>
       </Row>
     </Container> :
@@ -25,7 +25,10 @@ export default function Cart () {
           <Row>
             <Col>
             <Row className="text-end">
-            <Col md={{span: 4, offset:5}}><Button onClick={() => deleteAll()}>Delete All Products</Button></Col>
+            <Col><Button onClick={() => deleteAll()}>Delete All Products</Button></Col>
+          </Row>
+          <Row className="text-end">
+            <Col><Button href={"/checkout"} variant="success">Checkout</Button></Col>
           </Row>
             <Table striped className="mt-3 shopping-cart">
               <thead>

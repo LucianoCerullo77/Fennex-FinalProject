@@ -5,7 +5,7 @@ export default function Category() {
 
   return (
     <div>
-      <h1 style={{textAlign:'center'}}>Our Category List</h1>
+      <h1>Our Category List</h1>
       <ItemListContainer categoryId={categoryId} />
     </div>
   );

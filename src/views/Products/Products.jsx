@@ -3,7 +3,7 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 export default function Products() {
   return (
     <div>
-      <h1 style={{textAlign:'center'}}>Product List</h1>
+      <h1>Product List</h1>
       <ItemListContainer />
     </div>
   );
