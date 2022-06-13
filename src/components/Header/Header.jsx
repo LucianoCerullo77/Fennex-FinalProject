@@ -15,10 +15,10 @@ export default function Header () {
                 <Link to="/" className="nav-link active" aria-current="page">Home</Link>
                 <Link to="/products" className="nav-link active" aria-current="page">Products</Link>
                 <NavDropdown title="Category List" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/category/1" className="nav-link" aria-current="page">Keyboards</NavDropdown.Item>
-                  <NavDropdown.Item href="/category/2" className="nav-link" aria-current="page">Mouses</NavDropdown.Item>
-                  <NavDropdown.Item href="/category/3" className="nav-link" aria-current="page">MousePads</NavDropdown.Item>
-                  <NavDropdown.Item href="/category/4" className="nav-link" aria-current="page">PC´s</NavDropdown.Item>
+                  <Link to="/category/keyboards" className="nav-link" aria-current="page">Keyboards</Link>
+                  <Link to="/category/mouses" className="nav-link" aria-current="page">Mouses</Link>
+                  <Link to="/category/mousepads" className="nav-link" aria-current="page">MousePads</Link>
+                  <Link to="/category/pc´s" className="nav-link" aria-current="page">PC´s</Link>
                 </NavDropdown>
                 </Nav>
           </Navbar.Collapse>

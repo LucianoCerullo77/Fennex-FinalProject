@@ -28,7 +28,7 @@ export default function Cart () {
             <Col><Button onClick={() => deleteAll()}>Delete All Products</Button></Col>
           </Row>
           <Row className="text-end">
-            <Col><Button href={"/checkout"} variant="success">Checkout</Button></Col>
+            <Col><Link to={"/checkout"}><Button variant="success">Checkout</Button></Link></Col>
           </Row>
             <Table striped className="mt-3 shopping-cart">
               <thead>
