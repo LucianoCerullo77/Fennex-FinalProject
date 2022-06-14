@@ -1,14 +1,16 @@
 import React from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { Form,InputGroup, Col, Row, Button} from "react-bootstrap";
-import {CartContext}  from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 
 export default function CheckoutContainer () {
   const [data, setData] = React.useState();
-  const cart = React.useContext(CartContext);
+  const {cart} = React.useContext(CartContext);
+  const {cartTotalPrice} = React.useContext(CartContext);
   console.log(data);
   const [orderId, setOrderId] = React.useState();
+  console.log(orderId);
 
 
   const handleChange = (e) => {
@@ -20,30 +22,16 @@ export default function CheckoutContainer () {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const order = {
-      buyer: {
-        name: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        address:"",
-        zipCode: "",
-        city: "",
-        aditionalAdress: "",
-        username: "",
-      },
-      products: [
-        {
-          id: "",
-          name: "",
-          price: "",
-          quantity: "",
-        }
-      ]
+      buyer: data,
+      items: cart,
+      total: cartTotalPrice
     }
     const db = getFirestore()
-    const ordersCollection = collection(db,"orders")
-    await addDoc(ordersCollection, order).then(({id}) => setOrderId(id))
-    alert("Su pedido se ha realizado con éxito")
+    const orderCollection = collection(db,"orders")
+    await addDoc(orderCollection, order).then(({id}) => {
+      setOrderId(id)
+      alert("Order created")
+})
   }
   
     return (
