@@ -131,7 +131,7 @@ export default function CheckoutContainer () {
           <Form.Control
             required
             type="text"
-            name="aditionalAdress"
+            name="aditionalAddress"
             placeholder="Address"
             onChange={handleChange}
           />
