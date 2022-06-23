@@ -153,7 +153,9 @@ export default function CheckoutContainer () {
                   feedbackType="invalid"
                 />
               </Form.Group>
-              <Button type="submit" className="text-center">Complete Checkout</Button>
+              <Col className="text-center">
+              <Button type="submit" variant="success" className="text-center">Complete Checkout</Button>
+              </Col>
             </Form>
           </>
           :<>
@@ -161,10 +163,12 @@ export default function CheckoutContainer () {
           <Card.Body>
           <h1>Checkout Complete</h1>
           <Card.Title>Thank you for shopping at Fennex</Card.Title>
-          <Card.Text>Your Order Id : {orderId}</Card.Text>
+          <Card.Text>Your Following Order Is : {orderId}</Card.Text>
           <Card.Text>Your items will be shipped in 2-3 days</Card.Text>
-          <Button variant="secondary" onClick={()=>navigate('/')}>Back to Home</Button>
           </Card.Body>
+          <Col className="text-center">
+          <Button variant="secondary" onClick={()=>navigate('/')}>Back to Home</Button>
+          </Col>
           </Card>
           </>
           }
