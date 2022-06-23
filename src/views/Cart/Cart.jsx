@@ -28,14 +28,15 @@ export default function Cart () {
             <Col><Button onClick={() => deleteAll()}>Delete All Products</Button></Col>
           </Row>
           <Row className="text-end">
-            <Col><Link to={"/checkout"}><Button variant="success">Checkout</Button></Link></Col>
           </Row>
             <Table striped className="mt-3 shopping-cart">
               <thead>
               <tr>
                   <th>Item</th>
+                  <th></th>
                   <th>Quantity</th>
                   <th>Price</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -43,9 +44,9 @@ export default function Cart () {
                 <tr>
                   <td></td>
                   <td></td>
-                  <td></td>
                   <td>Total</td>
                   <td>${cartTotalPrice()}</td>
+                  <td><Col><Link to={"/checkout"}><Button variant="success">Checkout</Button></Link></Col></td>
                 </tr>
               </tbody>
             </Table>

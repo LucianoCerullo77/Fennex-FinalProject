@@ -32,7 +32,6 @@ export default function ItemListContainer ({title, categoryId}) {
           });
         }
       }, [categoryId]);
-      // las categorias que no supe anidar son: keyboards, mouses y mousepads
   return (
     <Container className="itemlist-container" style={{justifyContent:'center', textAlign:'center'}}>
       <Row>

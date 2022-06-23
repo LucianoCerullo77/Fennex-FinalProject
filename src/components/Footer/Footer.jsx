@@ -5,7 +5,7 @@ export default function Footer () {
       <Card className="text-center">
 
   <Card.Body>
-    <Card.Title>© 2022 Fennex. All Rights Reserved </Card.Title>
+    <Card.Title> 2022 Fennex ©. All Rights Reserved </Card.Title>
     <Card.Text>
       Fennex Argentina S.R.L - 20-21321123-1
     </Card.Text>
