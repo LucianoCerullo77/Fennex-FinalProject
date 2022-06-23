@@ -1,6 +1,7 @@
 # Fennex - CoderHouse React Project
 
 Fennex is a Personal project. An E-commerce of Pc Components.
+
 Direct Link to demo : https://fennex-six.vercel.app/
 
 # Dependecies
