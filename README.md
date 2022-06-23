@@ -21,11 +21,10 @@ React-Spinners
 Sass
 
 
-## Demo
-
-Insert gif or link to demo
+## Demo Gif
 
 https://imgur.com/a/hGokrip
+
 ## Run Locally
 
 Clone the project
