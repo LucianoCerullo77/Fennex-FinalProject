@@ -1,6 +1,6 @@
 import React from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { Form,InputGroup, Col, Row, Button} from "react-bootstrap"
+import { Form,InputGroup, Col, Row, Button, Card} from "react-bootstrap"
 import { CartContext } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
@@ -16,13 +16,13 @@ export default function CheckoutContainer () {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const orden = {
+    const order = {
       buyer: data,
       items: cart,
     };
     const db = getFirestore()
     const orderCollection = collection(db,"compras")
-    await addDoc(orderCollection, orden).then(({id}) => {
+    await addDoc(orderCollection, order).then(({id}) => {
       setOrderId(id)
       deleteAll()
 }
@@ -153,13 +153,19 @@ export default function CheckoutContainer () {
                   feedbackType="invalid"
                 />
               </Form.Group>
-              <Button type="submit">Complete Checkout</Button>
+              <Button type="submit" className="text-center">Complete Checkout</Button>
             </Form>
           </>
           :<>
-          <p>Muchas gracias por su compra!</p>
-          <p>Su orden es: {orderId}</p>
-          <button onClick={()=>navigate('/')}>Volver</button>
+          <Card className="cardCheckout text-center">
+          <Card.Body>
+          <h1>Checkout Complete</h1>
+          <Card.Title>Thank you for shopping at Fennex</Card.Title>
+          <Card.Text>Your Order Id : {orderId}</Card.Text>
+          <Card.Text>Your items will be shipped in 2-3 days</Card.Text>
+          <Button variant="secondary" onClick={()=>navigate('/')}>Back to Home</Button>
+          </Card.Body>
+          </Card>
           </>
           }
     </div>
