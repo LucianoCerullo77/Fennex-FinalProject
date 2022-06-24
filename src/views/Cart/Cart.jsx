@@ -29,7 +29,7 @@ export default function Cart () {
           </Row>
           <Row className="text-end">
           </Row>
-            <Table striped className="mt-3 shopping-cart">
+            <Table responsive>
               <thead>
               <tr>
                   <th>Item</th>

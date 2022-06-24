@@ -1,6 +1,6 @@
 import React from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { Form,InputGroup, Col, Row, Button, Card} from "react-bootstrap"
+import { Form,InputGroup, Col, Row, Button, Card, Container} from "react-bootstrap"
 import { CartContext } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
@@ -33,6 +33,7 @@ export default function CheckoutContainer () {
          {!orderId
          ? <>
             <h1>Checkout</h1>
+            <Container fluid>
             <Form onSubmit={handleSubmit}>
               <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -157,6 +158,7 @@ export default function CheckoutContainer () {
               <Button type="submit" variant="success" className="text-center">Complete Checkout</Button>
               </Col>
             </Form>
+            </Container>
           </>
           :<>
           <Card className="cardCheckout text-center">
