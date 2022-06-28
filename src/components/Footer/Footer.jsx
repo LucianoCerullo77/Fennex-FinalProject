@@ -1,4 +1,6 @@
 import {Card, Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 export default function Footer () {
   return (
     <footer>
@@ -9,7 +11,7 @@ export default function Footer () {
     <Card.Text>
       Fennex Argentina S.R.L - 20-21321123-1
     </Card.Text>
-    <Button variant="primary" href="/">Back to Home</Button>
+    <Link to="/home"><Button variant="primary">Back to Home</Button></Link>
   </Card.Body>
   <Card.Footer className="text-muted">Luciano Cerullo - Front-End Developer</Card.Footer>
 </Card>
